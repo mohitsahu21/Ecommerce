@@ -1,0 +1,93 @@
+@import "./mixins.scss";
+
+.hero-banner{
+
+   
+    position: relative;
+    background-image: linear-gradient(to right,#8e2de2,#4a00e0);
+    @include md{
+        height:100vh;
+    }
+    .content{
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 0 auto;
+        position: relative;
+        
+
+        @include md{
+            flex-direction: row;
+        }
+        .banner-img{
+            position: relative;
+            z-index: 9;
+            width: 100%;
+            
+            @include md{
+                width: 50%;
+                height: 100%; 
+            }
+        }
+        .text-content{
+            margin: 0 auto;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h1{
+               font-size: 80px;
+               font-weight: 700;
+               line-height: 1;
+               margin-bottom: 20px;
+
+               @include md{
+                font-size: 150px;
+
+               }
+
+            }
+            p{
+                max-width: 300px;
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 20px;
+                @include md{
+                    max-width: 500px;
+                    font-size: 18px;
+                    line-height: 24px;
+                    margin-bottom: 40px;
+                }
+            }
+            .ctas{
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                .banner-cta{
+                    text-transform: uppercase;
+                    font-size: 13px;
+                    font-weight: 500;
+                    border: 2px solid white;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    border-radius: 10px;
+                    &.v2{
+                        background-color: white;
+                        color: black;
+                    }
+                    &:hover{
+                        opacity: 0.6;
+                    }
+
+                }
+            }
+          
+        }
+
+
+    }
+}
