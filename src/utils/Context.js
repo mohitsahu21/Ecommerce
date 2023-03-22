@@ -4,7 +4,10 @@ import { useLocation } from "react-router-dom";
 
 export  const Context = createContext();
 
+
 const AppContext = ({children}) => {
+    const [categories,setCategories] = useState();
+    const [products, setProducts] = useState();
     
     const [cartItem,setCartItem] = useState([]);
     const [cartCount,setCartCount] = useState(0);
@@ -57,7 +60,7 @@ const AppContext = ({children}) => {
     }
 
     return (
-        <Context.Provider value={{ cartItem, setCartItem, cartCount, setCartCount, cartSubTotal, setCartSubTotal, handleAddToCart,handleRemoveFromCart,handleCartProductQuantity}}>
+        <Context.Provider value={{categories,setCategories,products, setProducts, cartItem, setCartItem, cartCount, setCartCount, cartSubTotal, setCartSubTotal, handleAddToCart,handleRemoveFromCart,handleCartProductQuantity}}>
             {children}
         </Context.Provider>);
 };

@@ -32,8 +32,9 @@
     flex-flow: wrap;
     gap: 10px;
     
-    cursor: pointer;
+    
     img{
+        cursor: pointer;
         transition: all ease 0.3s;
         display: block;
         width: 100%;
@@ -46,6 +47,7 @@
         max-width: 1200px;
         margin: 20px auto;
         img{
+            cursor: pointer;
             transition: all ease 0.3s;
             display: block;
             width: 100%;
